@@ -85,3 +85,21 @@ ul li {
     margin-bottom: 2em; 
   }
 }
+
+.hero-1 {
+  background-image: url(../images/OSE_skyline_headerA_1.png);
+  background-size: cover;
+  background-position: 50% 25%;
+  &:before {
+    display: none;
+  }
+}
+
+.hero-2 {
+  background-image: url(../images/OSE_skyline_headerB_1.png);
+  background-position: 50% 25%;
+  background-size: cover;
+  &:before {
+    display: none;
+  }
+}

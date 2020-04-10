@@ -12460,4 +12460,24 @@ ul li {
 #contact h6 {
   margin-bottom: 2em;
 }
+
+.hero-1 {
+  background-image: url(../images/OSE_skyline_headerA_1.png);
+  background-size: cover;
+  background-position: 50% 25%;
+}
+
+.hero-1:before {
+  display: none;
+}
+
+.hero-2 {
+  background-image: url(../images/OSE_skyline_headerB_1.png);
+  background-position: 50% 25%;
+  background-size: cover;
+}
+
+.hero-2:before {
+  display: none;
+}
 /*# sourceMappingURL=theme.css.map */
