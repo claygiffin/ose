@@ -9,7 +9,7 @@
     <!-- Corrects IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>NYC Office of Special Enforcement | Home</title>
+    <title>NYC Office of Special Enforcement</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
@@ -170,23 +170,35 @@
                           <li><a href="./about/mission-and-vision.html">Our Mission & Vision</a></li>
                           <li><a href="./about/leadership.html">Leadership</a></li>
                           <li><a href="./about/employment.html">Employment Opportunities</a></li>
-                          <li><a href="./about/contracts-and-solicitations.html">Contracts & Solicitations</a></li>
+                          <li>
+                            <a href="./about/contracts-and-solicitations.html">Contracts & Solicitations</a>
+                          </li>
                         </ul>
                       </div>
                     </div>
                     <!-- .nav-item -->
 
-                    <div class="nav-item ">
+                    <div class="nav-item">
                       <a
-                        class="nav-link"
-                        href="./illegal-short-term-rentals/"
+                        class="nav-link dropdown-toggle"
+                        href="#"
                         id="nav-item-02"
+                        data-toggle="dropdown"
                         aria-haspopup="false"
                         aria-expanded="false"
                         title="Nav Item"
                       >
                         Illegal Short-Term Rentals
                       </a>
+
+                      <div class="dropdown-menu" aria-labelledby="nav-item-01">
+                        <ul class="extensible-list">
+                          <li>
+                            <a href="./illegal-short-term-rentals/">About Illegal Short-Term Rentals</a>
+                          </li>
+                          <li><a href="./illegal-short-term-rentals/quiz.html">Take the Quiz</a></li>
+                        </ul>
+                      </div>
                     </div>
                     <!-- .nav-item -->
 
@@ -205,9 +217,19 @@
 
                       <div class="dropdown-menu" aria-labelledby="nav-item-03">
                         <ul class="extensible-list">
-                          <li><a href="./laws-and-fines/illegal-short-term-rentals.html">Illegal Short-Term Rentals Laws & Fines</a></li>
-                          <li><a href="./laws-and-fines/general-laws-and-fines.html">General Laws & Fines</a></li>
-                          <li><a href="./laws-and-fines/resolve-a-violation.html">How to Resolve a Violation</a></li>
+                          <li>
+                            <a href="./laws-and-fines/illegal-short-term-rentals.html"
+                              >Illegal Short-Term Rentals Laws & Fines</a
+                            >
+                          </li>
+                          <li>
+                            <a href="./laws-and-fines/general-laws-and-fines.html">General Laws & Fines</a>
+                          </li>
+                          <li>
+                            <a href="./laws-and-fines/resolve-a-violation.html"
+                              >How to Resolve a Violation</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -325,38 +347,20 @@
 
     <main id="skip-header-target" role="main">
       <section class="featured-panel device-lg" dir="ltr">
-        <div class="card bg-white">
-          <div class="overlay-gradient-x-white">
-            <img class="card-img" src="https://via.placeholder.com/1500x750" alt="Card image" />
+        <div class="card bg-primary">
+          <div class="photo">
+            <img class="card-img" src="./images/OSE_skyline_home_1.png" alt="Card image" />
           </div>
 
-          <div class="card-img-overlay d-flex px-0">
-            <div class="container align-self-center px-0">
-              <div class="row no-gutters">
-                <div class="col-lg-6">
-                  <div class="card bg-white my-2">
-                    <div class="card-body">
-                      <h1 class="card-title text-primary">Lorem ipsum illegal short-term rentals comet dolor</h1>
-                      <p class="card-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima id quibusdam
-                        molestiae, et nisi nostrum exercitationem consectetur perferendis earum.
-                      </p>
-                    </div>
-
-                    <div class="card-footer">
-                      <a class="btn btn-lg btn-outline-primary has-icon stretched-link" href="#">
-                        <span class="fas fa-angle-right" role="img"></span>
-                        <span class="title">Learn about illegal short-term rentals</span>
-                      </a>
-                    </div>
-                  </div>
-                  <!-- .card -->
-                </div>
-                <!-- .col -->
+          <div class="card-img-overlay d-flex">
+            <div class="container align-self-center my-3">
+              <div class="narrow text-white text-center">
+                <h1 class="card-title display-4 font-weight-bold mb-3">
+                  Lorem ipsum dolor sit amet consectetur.
+                </h1>
+                <a href="#" class="btn btn-lg btn-info">Button Link</a>
               </div>
-              <!-- .row -->
             </div>
-            <!-- .container -->
           </div>
           <!-- .container -->
         </div>

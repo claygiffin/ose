@@ -9,7 +9,7 @@
     <!-- Corrects IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Article Three Column • NYC Core Framework</title>
+    <title>Contact | NYC Office of Special Enforcement</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../fontawesome/css/all.min.css" />
@@ -180,17 +180,27 @@
                     </div>
                     <!-- .nav-item -->
 
-                    <div class="nav-item ">
+                    <div class="nav-item">
                       <a
-                        class="nav-link"
-                        href="../illegal-short-term-rentals/"
+                        class="nav-link dropdown-toggle"
+                        href="#"
                         id="nav-item-02"
+                        data-toggle="dropdown"
                         aria-haspopup="false"
                         aria-expanded="false"
                         title="Nav Item"
                       >
                         Illegal Short-Term Rentals
                       </a>
+
+                      <div class="dropdown-menu" aria-labelledby="nav-item-01">
+                        <ul class="extensible-list">
+                          <li>
+                            <a href="../illegal-short-term-rentals/">About Illegal Short-Term Rentals</a>
+                          </li>
+                          <li><a href="../illegal-short-term-rentals/quiz.html">Take the Quiz</a></li>
+                        </ul>
+                      </div>
                     </div>
                     <!-- .nav-item -->
 
@@ -454,9 +464,7 @@
                   <!-- .form-group -->
 
                   <div class="form-group">
-                    <label for="label-02"
-                      >Phone Number
-                    </label>
+                    <label for="label-02">Phone Number </label>
                     <p class="invalid-feedback" aria-hidden="true">
                       <span class="fas fa-exclamation-triangle"></span>
                       <span class="invalid-description">Error message description</span>
@@ -467,15 +475,13 @@
                   <!-- .form-group -->
 
                   <div class="form-group">
-                    <label for="borough"
-                      >Borough
-                    </label>
+                    <label for="borough">Borough </label>
                     <p class="invalid-feedback">
                       <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
                       <span class="invalid-description">Error message description</span>
                       <span class="invalid-instruction">How to fix instructions</span>
                     </p>
-                    <select class="form-control form-control-lg" id="borough" >
+                    <select class="form-control form-control-lg" id="borough">
                       <option value="">Select One...</option>
                       <option value="Bronx">Bronx</option>
                       <option value="Brooklyn">Brooklyn</option>
