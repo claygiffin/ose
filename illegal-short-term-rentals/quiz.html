@@ -352,7 +352,7 @@
       <!-- Add your custom image class below (replace 'oculus' with your own custom class) -->
       <div class="bg-primary banner-with-background hero-2 d-flex flex-column">
         <div class="container-fluid my-auto">
-          <div class="narrow my-3">
+          <div class="wide my-3">
             <h1 class="display-4 text-white">Illegal Short-Term Rentals</h1>
           </div>
         </div>
@@ -412,6 +412,99 @@
             <div class="my-5">
               <div class="narrow my-4">
                 <h2>Is your short-term rental legal?</h2>
+
+                <!-- QUIZ //////////////////////////// -->
+
+                <div id="quiz">
+                  <div id="q-01" class="question-wrap">
+                    <div class="question">Q-01: Are you a host or a traveler?</div>
+                    <div class="answer" data-route="h-01" data-type="type" data-val="host">
+                      A-01: Host
+                    </div>
+                    <div class="answer" data-route="t-01" data-type="type" data-val="traveler">
+                      A-02: Traveler
+                    </div>
+                  </div>
+                  <div id="h-01" class="question-wrap">
+                    <div class="question">H-01: What type of dwelling will you be hosting in?</div>
+                    <div class="answer" data-route="h-02" data-type="dwelling" data-val="apartment">
+                      Apartment Building with 2 or more units
+                    </div>
+                    <div class="answer" data-route="h-02" data-type="dwelling" data-val="coop">
+                      Co-Op/Condo
+                    </div>
+                    <div class="answer" data-route="h-02" data-type="dwelling" data-val="single-family">
+                      Single Family Home
+                    </div>
+                    <div class="answer" data-route="h-02" data-type="dwelling" data-val="two-family">
+                      Two Family Home
+                    </div>
+                  </div>
+                  <div id="h-02" class="question-wrap">
+                    <div class="question">H-02: How long will the paying guests be staying</div>
+                    <div class="answer" data-route="h-03" data-type="days" data-val="lt30">
+                      Fewer than 30 days
+                    </div>
+                    <div class="answer" data-route="h-03" data-type="days" data-val="gt30">
+                      More than 30 days
+                    </div>
+                  </div>
+                  <div id="h-03" class="question-wrap">
+                    <div class="question">
+                      H-03: Will you be at home while the guests are staying at your place?
+                    </div>
+                    <div class="answer" data-route="h-04" data-type="home" data-val="yes">
+                      Yes, I will be home
+                    </div>
+                    <div class="answer" data-route="h-04" data-type="home" data-val="no">
+                      No, I will not be home
+                    </div>
+                  </div>
+                  <div id="h-04" class="question-wrap">
+                    <div class="question">H-04: Will there be more than 2 total guests in the party?</div>
+                    <div class="answer" data-route="results" data-type="number-guests" data-val="gt2">
+                      More than 2 guests
+                    </div>
+                    <div class="answer" data-route="results" data-type="number-guests" data-val="lt3">
+                      Only 1 or 2 guests
+                    </div>
+                  </div>
+
+                  <div id="results">
+                    <div id="host-results">
+                      <div class="headline">Your rental is probably <em class="legality"></em>.</div>
+                      <div class="gt30-description">
+                        Stays of longer than 30 days aren’t considered short-term rentals. Your proposed
+                        rental activity is legal, so long as you stay for more than 30 days.
+                      </div>
+                      <div class="description">
+                        In New York City, if you are staying for less than 30 days:
+                      </div>
+                      <ul class="details">
+                        <li result-type="home">
+                          The host must be actively living in the dwelling during the rental period.
+                          <div class="subtext">
+                            Internal doors cannot have key locks that allow guests to leave and lock their
+                            room behind them. Every member of the family and all guests must have access to
+                            all parts of the dwelling. Internal doors with such key locks create barriers to
+                            escaping in an emergency and may result in the issuance of a temporary vacate
+                            order.
+                          </div>
+                        </li>
+                        <li result-type="number-guests">
+                          The traveling party must be 2 guests or less.
+                          <div class="subtext">
+                            You can have up to two paying guests for less than 30 days if you’re home and if
+                            every guest has free and unobstructed access to every room and each exit within
+                            the apartment and has the right to use at least one bathroom.
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div id="reset">Reset Quiz</div>
+                </div>
               </div>
               <!-- .narrow -->
 
@@ -659,5 +752,8 @@
 
     <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
     <script src="../js/main.js"></script>
+
+    <!-- Quiz Code -->
+    <script src="../js/quiz.js"></script>
   </body>
 </html>

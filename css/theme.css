@@ -12409,12 +12409,20 @@ In this file:
   background-color: #573208;
 }
 
+h1 {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 h2 {
   margin-bottom: 0.75em;
 }
 
 h3 {
   margin-top: 1em;
+}
+
+.wide {
+  text-align: center;
 }
 
 .list-group.custom-active a.active {
@@ -12462,9 +12470,9 @@ ul li {
 }
 
 .hero-1 {
-  background-image: url(../images/OSE_skyline_headerA_1.png);
+  background-image: url(../images/OSE_banner_blue.png);
   background-size: cover;
-  background-position: 50% 25%;
+  background-position: 50% 100%;
 }
 
 .hero-1:before {
@@ -12472,12 +12480,92 @@ ul li {
 }
 
 .hero-2 {
-  background-image: url(../images/OSE_skyline_headerB_1.png);
-  background-position: 50% 25%;
+  background-image: url(../images/OSE_banner_red.png);
+  background-position: 50% 100%;
   background-size: cover;
 }
 
 .hero-2:before {
   display: none;
+}
+
+.hero-3 {
+  background-image: url(../images/OSE_banner_yellow.png);
+  background-position: 50% 100%;
+  background-size: cover;
+}
+
+.hero-3:before {
+  display: none;
+}
+
+#quiz > div {
+  display: none;
+}
+
+#quiz .question {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+#quiz .answer {
+  color: #0029f7;
+  display: inline-block;
+  border: 1px solid currentColor;
+  padding: 0.5em 1em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+#quiz .answer:hover {
+  color: #5e79ff;
+}
+
+#quiz #results > div {
+  display: none;
+}
+
+#quiz #results .headline {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+#quiz #results .headline .legality:before {
+  content: 'legal';
+  color: #21883f;
+}
+
+#quiz #results .headline .legality.illegal:before {
+  content: 'illegal';
+  color: #ea172b;
+}
+
+#quiz #results .gt30-description {
+  display: none;
+  margin-bottom: 1.5em;
+}
+
+#quiz #results .description {
+  margin-bottom: 1.5em;
+}
+
+#quiz #results .details li.illegal {
+  color: #ea172b;
+}
+
+#quiz #reset {
+  display: block;
+  color: #0029f7;
+  margin-top: 1em;
+  cursor: pointer;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+#quiz #reset:hover {
+  color: #5e79ff;
 }
 /*# sourceMappingURL=theme.css.map */

@@ -29,6 +29,10 @@ In this file:
 
 // Put anything you want here
 
+h1 {
+  text-shadow: 0 0 5px rgba(black, 0.2);
+}
+
 h2 {
   margin-bottom: 0.75em;
 }
@@ -37,6 +41,9 @@ h3 {
   margin-top: 1em;
 }
 
+.wide {
+  text-align: center;
+}
 
 .list-group.custom-active {
   a.active {
@@ -82,24 +89,99 @@ ul li {
 
 #contact {
   h6 {
-    margin-bottom: 2em; 
+    margin-bottom: 2em;
   }
 }
 
 .hero-1 {
-  background-image: url(../images/OSE_skyline_headerA_1.png);
+  background-image: url(../images/OSE_banner_blue.png);
   background-size: cover;
-  background-position: 50% 25%;
+  background-position: 50% 100%;
   &:before {
     display: none;
   }
 }
 
 .hero-2 {
-  background-image: url(../images/OSE_skyline_headerB_1.png);
-  background-position: 50% 25%;
+  background-image: url(../images/OSE_banner_red.png);
+  background-position: 50% 100%;
   background-size: cover;
   &:before {
     display: none;
+  }
+}
+
+.hero-3 {
+  background-image: url(../images/OSE_banner_yellow.png);
+  background-position: 50% 100%;
+  background-size: cover;
+  &:before {
+    display: none;
+  }
+}
+
+#quiz {
+  > div {
+    display: none;
+  }
+  .question {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+  }
+  .answer {
+    color: $blue;
+    display: inline-block;
+    border: 1px solid currentColor;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    &:hover {
+      color: lighten($blue, 20%);
+    }
+  }
+  #results {
+    > div {
+      display: none;
+    }
+    .headline {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+      .legality {
+        &:before {
+          content: 'legal';
+          color: $green;
+        }
+        &.illegal:before {
+          content: 'illegal';
+          color: $red;
+        }
+      }
+    }
+    .gt30-description {
+      display: none;
+      margin-bottom: 1.5em;
+    }
+    .description {
+      margin-bottom: 1.5em;
+    }
+    .details {
+      li {
+        &.illegal {
+          color: $red;
+        }
+      }
+    }
+  }
+  #reset {
+    display: block;
+    color: $blue;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    &:hover {
+      color: lighten($blue, 20%);
+    }
   }
 }
