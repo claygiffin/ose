@@ -411,22 +411,22 @@
           <div class="col-xl-8 overflow-hidden" id="primary-content">
             <div class="my-5">
               <div class="narrow my-4">
-                <h2>Is your short-term rental legal?</h2>
+                <h3>Is your short-term rental legal? This tool will help you find out.</h3>
 
                 <!-- QUIZ //////////////////////////// -->
 
                 <div id="quiz">
                   <div id="q-01" class="question-wrap">
-                    <div class="question">Q-01: Are you a host or a traveler?</div>
+                    <div class="question">Are you a host or a traveler?</div>
                     <div class="answer" data-route="h-01" data-type="type" data-val="host">
-                      A-01: Host
+                      Host
                     </div>
                     <div class="answer" data-route="t-01" data-type="type" data-val="traveler">
-                      A-02: Traveler
+                      Traveler
                     </div>
                   </div>
                   <div id="h-01" class="question-wrap">
-                    <div class="question">H-01: What type of dwelling will you be hosting in?</div>
+                    <div class="question">What type of dwelling will you be hosting in?</div>
                     <div class="answer" data-route="h-02" data-type="dwelling" data-val="apartment">
                       Apartment Building with 2 or more units
                     </div>
@@ -441,7 +441,7 @@
                     </div>
                   </div>
                   <div id="h-02" class="question-wrap">
-                    <div class="question">H-02: How long will the paying guests be staying</div>
+                    <div class="question">How long will the paying guests be staying</div>
                     <div class="answer" data-route="h-03" data-type="days" data-val="lt30">
                       Fewer than 30 days
                     </div>
@@ -451,7 +451,7 @@
                   </div>
                   <div id="h-03" class="question-wrap">
                     <div class="question">
-                      H-03: Will you be at home while the guests are staying at your place?
+                      Will you be at home while the guests are staying at your place?
                     </div>
                     <div class="answer" data-route="h-04" data-type="home" data-val="yes">
                       Yes, I will be home
@@ -461,7 +461,7 @@
                     </div>
                   </div>
                   <div id="h-04" class="question-wrap">
-                    <div class="question">H-04: Will there be more than 2 total guests in the party?</div>
+                    <div class="question">Will there be more than 2 total guests in the party?</div>
                     <div class="answer" data-route="results" data-type="number-guests" data-val="gt2">
                       More than 2 guests
                     </div>
@@ -470,40 +470,140 @@
                     </div>
                   </div>
 
-                  <div id="results">
-                    <div id="host-results">
-                      <div class="headline">Your rental is probably <em class="legality"></em>.</div>
-                      <div class="gt30-description">
-                        Stays of longer than 30 days aren’t considered short-term rentals. Your proposed
-                        rental activity is legal, so long as you stay for more than 30 days.
-                      </div>
-                      <div class="description">
-                        In New York City, if you are staying for less than 30 days:
-                      </div>
-                      <ul class="details">
-                        <li result-type="home">
-                          The host must be actively living in the dwelling during the rental period.
-                          <div class="subtext">
-                            Internal doors cannot have key locks that allow guests to leave and lock their
-                            room behind them. Every member of the family and all guests must have access to
-                            all parts of the dwelling. Internal doors with such key locks create barriers to
-                            escaping in an emergency and may result in the issuance of a temporary vacate
-                            order.
-                          </div>
-                        </li>
-                        <li result-type="number-guests">
-                          The traveling party must be 2 guests or less.
-                          <div class="subtext">
-                            You can have up to two paying guests for less than 30 days if you’re home and if
-                            every guest has free and unobstructed access to every room and each exit within
-                            the apartment and has the right to use at least one bathroom.
-                          </div>
-                        </li>
-                      </ul>
+                  <div id="t-01" class="question-wrap">
+                    <div class="question">How long will you be staying</div>
+                    <div class="answer" data-route="t-02" data-type="days" data-val="lt30">
+                      Fewer than 30 days
+                    </div>
+                    <div class="answer" data-route="t-02" data-type="days" data-val="gt30">
+                      More than 30 days
+                    </div>
+                  </div>
+                  <div id="t-02" class="question-wrap">
+                    <div class="question">
+                      Will there be more than 2 total travelers in your party?
+                    </div>
+                    <div class="answer" data-route="t-03" data-type="number-guests" data-val="gt2">
+                      More than 2 travelers
+                    </div>
+                    <div class="answer" data-route="t-03" data-type="number-guests" data-val="lt3">
+                      Only 1 or 2 travelers
+                    </div>
+                  </div>
+                  <div id="t-03" class="question-wrap">
+                    <div class="question">
+                      Are you booking the entire place?
+                    </div>
+                    <div class="answer" data-route="results" data-type="home" data-val="no">
+                      Yes, I am booking the entire place
+                    </div>
+                    <div class="answer" data-route="t-04">
+                      No, I am booking a room in a unit
+                    </div>
+                  </div>
+                  <div id="t-04" class="question-wrap">
+                    <div class="question">
+                      Will the host be home during your stay?
+                    </div>
+                    <p class="description">
+                      The host’s presence is important to ensure properties you are staying in will be safe
+                      at all times. Sprinklers, fire exits, healthy living conditions, and occupant safety
+                      are all part of city and state laws that protect you and the people of NYC.
+                    </p>
+                    <div class="answer" data-route="results" data-type="home" data-val="yes">
+                      Yes
+                    </div>
+                    <div class="answer" data-route="results" data-type="home" data-val="no">
+                      No
+                    </div>
+                    <div class="answer" data-route="results" data-type="home" data-val="maybe">
+                      I don't know
                     </div>
                   </div>
 
-                  <div id="reset">Reset Quiz</div>
+                  <div id="results">
+                    <div id="host-results" class="result">
+                      <div class="headline">Your rental <span class="legality"></span>.</div>
+                      <div class="gt30-description">
+                        <p>
+                          Stays of longer than 30 days aren’t considered short-term rentals. Your proposed
+                          rental activity is legal, so long as you stay for more than 30 days.
+                        </p>
+                        <p>
+                          If you are considering stays of fewer than 30 days, re-take the quiz to find out
+                          if your stay is legal.
+                        </p>
+                      </div>
+                      <div class="details">
+                        <div class="description">
+                          In New York City, if you are staying for fewer than 30 days:
+                        </div>
+                        <ul>
+                          <li result-type="home">
+                            The host must be actively living in the dwelling during the rental period.
+                            <div class="subtext">
+                              Internal doors cannot have key locks that allow guests to leave and lock their
+                              room behind them. Every member of the family and all guests must have access
+                              to all parts of the dwelling. Internal doors with such key locks create
+                              barriers to escaping in an emergency and may result in the issuance of a
+                              temporary vacate order.
+                            </div>
+                          </li>
+                          <li result-type="number-guests">
+                            The traveling party must be 2 guests or fewer.
+                            <div class="subtext">
+                              You can have up to two paying guests for fewer than 30 days if you’re home and
+                              if every guest has free and unobstructed access to every room and each exit
+                              within the apartment and has the right to use at least one bathroom.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="traveler-results" class="result">
+                      <div class="headline">Your stay <span class="legality"></span>.</div>
+                      <div class="gt30-description">
+                        <p>
+                          Stays of longer than 30 days aren’t considered short-term rentals. Your proposed
+                          rental activity is legal, so long as you stay for more than 30 days.
+                        </p>
+                        <p>
+                          If you are considering stays of fewer than 30 days, re-take the quiz to find out
+                          if your stay is legal.
+                        </p>
+                      </div>
+                      <div class="details">
+                        <div class="description">
+                          In New York City, if you are staying for fewer than 30 days:
+                        </div>
+                        <ul>
+                          <li result-type="home">
+                            The host must be actively living in the dwelling during the rental period.
+                            <div class="subtext">
+                              The host’s presence is important to ensure properties you are staying in will
+                              be safe at all times. Sprinklers, fire exits, healthy living conditions, and
+                              occupant safety are all part of city and state laws that protect you and the
+                              people of NYC.
+                              <div class="if-unknown">
+                                To ensure the legality of your stay, contact your host to conﬁrm they will be
+                                actively living in the dwelling during the rental period.
+                              </div>
+                            </div>
+                          </li>
+                          <li result-type="number-guests">
+                            The traveling party must be 2 guests or fewer.
+                            <div class="subtext"></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="read-more">
+                      Read more about the laws involving illegal short-term rentals <a href="#">here</a>.
+                    </div>
+                  </div>
+                  <div id="reset"></div>
                 </div>
               </div>
               <!-- .narrow -->

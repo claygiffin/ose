@@ -12425,6 +12425,10 @@ h3 {
   text-align: center;
 }
 
+#global-header .dropdown-menu a {
+  display: inline-block;
+}
+
 .list-group.custom-active a.active {
   background-color: unset;
   font-weight: 700;
@@ -12469,6 +12473,17 @@ ul li {
   margin-bottom: 2em;
 }
 
+.featured-panel .button {
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+
+.featured-panel .button:hover {
+  border-color: white;
+  background-color: #000;
+}
+
 .hero-1 {
   background-image: url(../images/OSE_banner_blue.png);
   background-size: cover;
@@ -12499,29 +12514,32 @@ ul li {
   display: none;
 }
 
+#quiz {
+  margin-top: 2rem;
+  padding: 2rem 1.5rem;
+  background-color: #f0f3fa;
+  text-align: center;
+}
+
 #quiz > div {
   display: none;
 }
 
-#quiz .question {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
+#quiz .question-wrap {
+  border-bottom: 1px solid #99b1de;
+  padding-bottom: 2rem;
 }
 
-#quiz .answer {
-  color: #0029f7;
-  display: inline-block;
-  border: 1px solid currentColor;
-  padding: 0.5em 1em;
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
-  cursor: pointer;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+#quiz .question-wrap .question {
+  font-size: 2.5rem;
+  line-height: 1.125;
+  margin-bottom: 1em;
 }
 
-#quiz .answer:hover {
-  color: #5e79ff;
+#quiz .question-wrap .description {
+  margin-top: -1.5em;
+  margin-bottom: 2em;
+  font-style: italic;
 }
 
 #quiz #results > div {
@@ -12529,18 +12547,34 @@ ul li {
 }
 
 #quiz #results .headline {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
+  font-size: 2.5rem;
+  line-height: 1.125;
+  margin-bottom: 0.75em;
 }
 
 #quiz #results .headline .legality:before {
-  content: 'legal';
-  color: #21883f;
+  content: 'is probably ';
 }
 
-#quiz #results .headline .legality.illegal:before {
+#quiz #results .headline .legality:after {
+  content: 'legal';
+  color: #21883f;
+  font-style: italic;
+}
+
+#quiz #results .headline .legality.illegal:after {
   content: 'illegal';
   color: #ea172b;
+}
+
+#quiz #results .headline .legality.unknown:before {
+  content: 'might be ';
+  color: #0029f7;
+}
+
+#quiz #results .headline .legality.unknown:after {
+  content: 'illegal';
+  color: #0029f7;
 }
 
 #quiz #results .gt30-description {
@@ -12548,17 +12582,99 @@ ul li {
   margin-bottom: 1.5em;
 }
 
-#quiz #results .description {
+#quiz #results .details .description {
+  font-weight: 700;
   margin-bottom: 1.5em;
+  background: #dce5f4;
+  padding: 0.5em;
 }
 
-#quiz #results .details li.illegal {
+#quiz #results .details ul {
+  text-align: left;
+  list-style: none;
+  position: relative;
+  padding-left: 2.75rem;
+}
+
+#quiz #results .details ul li {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #21883f;
+  font-weight: 600;
+}
+
+#quiz #results .details ul li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#quiz #results .details ul li.illegal {
   color: #ea172b;
 }
 
-#quiz #reset {
-  display: block;
+#quiz #results .details ul li.illegal:before {
+  content: '✗';
+}
+
+#quiz #results .details ul li .if-unknown {
+  display: none;
+}
+
+#quiz #results .details ul li.unknown {
   color: #0029f7;
+}
+
+#quiz #results .details ul li.unknown:before {
+  content: '?';
+}
+
+#quiz #results .details ul li.unknown .if-unknown {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  font-style: normal;
+  font-weight: 600;
+}
+
+#quiz #results .details ul li .subtext {
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 0.5em;
+  color: #495057;
+}
+
+#quiz #results .read-more {
+  display: block;
+  margin-top: 3em;
+  padding: 1em 0 1.5em;
+  border-bottom: 1px solid #99b1de;
+  border-top: 1px solid #d3ddf1;
+  font-weight: 600;
+}
+
+#quiz #reset {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  color: #7294d2;
   margin-top: 1em;
   cursor: pointer;
   -webkit-transition: color 0.5s ease;
@@ -12566,6 +12682,37 @@ ul li {
 }
 
 #quiz #reset:hover {
-  color: #5e79ff;
+  color: #0029f7;
+}
+
+.list-group-item.active {
+  background: #000;
+  border-color: #000;
+}
+
+.button,
+#quiz .question-wrap .answer {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0;
+  color: #181a7b;
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  border: 1px solid currentColor;
+  padding: 0.5em 1em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.button:hover,
+#quiz .question-wrap .answer:hover {
+  color: white;
+  background-color: #181a7b;
+  border-color: #181a7b;
 }
 /*# sourceMappingURL=theme.css.map */
