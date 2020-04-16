@@ -12429,6 +12429,25 @@ h3 {
   display: inline-block;
 }
 
+#quick-links {
+  background-color: #dee2e6;
+}
+
+#quick-links .card {
+  background-color: #fff;
+}
+
+#quick-links .card .btn {
+  background-color: #fff;
+  border-color: #181a7b;
+  color: #181a7b;
+}
+
+#quick-links .card .btn:hover {
+  background-color: #181a7b;
+  color: #fff;
+}
+
 .list-group.custom-active a.active {
   background-color: unset;
   font-weight: 700;
@@ -12443,30 +12462,99 @@ ul li {
 }
 
 .leadership-card {
-  background-color: #e6ecf7;
   background-color: #f0f3fa;
   margin-top: 2rem;
+  padding: 1.5rem;
 }
 
-.leadership-card .card-header {
-  border-bottom: 1px solid #bfcfeb;
+.leadership-card > div {
+  padding: 0;
 }
 
 .leadership-card .card-header h3 {
   margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.leadership-card .card-body {
+  border-top: 1px solid #bfcfeb;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+#about-istr .accordion-group h3 {
+  margin-top: 1.5em;
+}
+
+#about-istr .accordion-group .card {
+  margin-bottom: 1.5em;
 }
 
 #job-openings {
   margin-top: 3rem;
 }
 
-#news h6 {
-  display: inline-block;
-  width: 100%;
+#news .intro,
+#reports .intro,
+#testimony .intro {
+  border-bottom: 1px solid #d3ddf1;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
-#news h5 {
-  margin-bottom: 1.5em;
+#news h6,
+#reports h6,
+#testimony h6 {
+  border-top: 1px solid #d3ddf1;
+  padding-top: 1em;
+  margin-top: 1em;
+  display: inline-block;
+  width: 100%;
+  color: #777677;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+#news h5,
+#reports h5,
+#testimony h5 {
+  margin-bottom: 1em;
+  line-height: 1.375;
+}
+
+#news h5 a,
+#reports h5 a,
+#testimony h5 a {
+  color: #181a7b;
+}
+
+#news h5 a:hover,
+#reports h5 a:hover,
+#testimony h5 a:hover {
+  color: #0029f7;
+}
+
+#news h5 span,
+#reports h5 span,
+#testimony h5 span {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #777677;
+  margin-top: 0.5em;
+}
+
+#news .btn,
+#reports .btn,
+#testimony .btn {
+  margin-bottom: 1em;
+}
+
+#article h1 {
+  text-shadow: none;
+  margin-bottom: 0.5em;
 }
 
 #contact h6 {
@@ -12542,6 +12630,13 @@ ul li {
   font-style: italic;
 }
 
+#quiz .question-wrap .answer {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 #quiz #results > div {
   display: none;
 }
@@ -12569,12 +12664,12 @@ ul li {
 
 #quiz #results .headline .legality.unknown:before {
   content: 'might be ';
-  color: #0029f7;
+  color: #c45500;
 }
 
 #quiz #results .headline .legality.unknown:after {
   content: 'illegal';
-  color: #0029f7;
+  color: #c45500;
 }
 
 #quiz #results .gt30-description {
@@ -12636,7 +12731,7 @@ ul li {
 }
 
 #quiz #results .details ul li.unknown {
-  color: #0029f7;
+  color: #c45500;
 }
 
 #quiz #results .details ul li.unknown:before {

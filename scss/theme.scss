@@ -49,6 +49,22 @@ h3 {
   display: inline-block;
 }
 
+#quick-links {
+  background-color: $gray-300;
+  .card {
+    background-color: $white;
+    .btn {
+      background-color: $white;
+      border-color: $primary;
+      color: $primary;
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}
+
 .list-group.custom-active {
   a.active {
     background-color: unset;
@@ -65,14 +81,32 @@ ul li {
 }
 
 .leadership-card {
-  background-color: $light;
   background-color: lighten($light, 2.5%);
   margin-top: 2rem;
+  padding: 1.5rem;
+  > div {
+    padding: 0;
+  }
   .card-header {
-    // background-color: $light;
-    border-bottom: 1px solid darken($light, 10%);
     h3 {
       margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+  }
+  .card-body {
+    border-top: 1px solid darken($light, 10%);
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+#about-istr {
+  .accordion-group {
+    h3 {
+      margin-top: 1.5em;
+    }
+    .card {
+      margin-bottom: 1.5em;
     }
   }
 }
@@ -81,13 +115,52 @@ ul li {
   margin-top: 3rem;
 }
 
-#news {
+#news,
+#reports,
+#testimony {
+  .intro {
+    border-bottom: 1px solid darken($light, 5%);
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+  }
   h6 {
+    border-top: 1px solid darken($light, 5%);
+    padding-top: 1em;
+    margin-top: 1em;
     display: inline-block;
     width: 100%;
+    color: $gray-600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
   }
   h5 {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
+    line-height: 1.375;
+    a {
+      color: $primary;
+      &:hover {
+        color: $blue;
+      }
+    }
+    span {
+      display: inline-block;
+      width: 100%;
+      font-size: 1.125rem;
+      font-style: italic;
+      font-weight: 500;
+      color: $gray-600;
+      margin-top: 0.5em;
+    }
+  }
+  .btn {
+    margin-bottom: 1em;
+  }
+}
+
+#article {
+  h1 {
+    text-shadow: none;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -160,6 +233,7 @@ ul li {
     }
     .answer {
       @extend %button;
+      user-select: none;
     }
   }
   #results {
@@ -188,11 +262,11 @@ ul li {
         &.unknown {
           &:before {
             content: 'might be ';
-            color: $blue;
+            color: $orange;
           }
           &:after {
             content: 'illegal';
-            color: $blue;
+            color: $orange;
           }
         }
       }
@@ -241,7 +315,7 @@ ul li {
             display: none;
           }
           &.unknown {
-            color: $blue;
+            color: $orange;
             &:before {
               content: '?';
             }
