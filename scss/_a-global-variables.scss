@@ -83,11 +83,13 @@ $accessible-colors: true;
 
 // Set your theme's color palette here
 
-$primary: #181a7b;
-$secondary: #3b6cf6;
+$primary: black;
+$secondary: #EF3F38;
 $info: #a513b6;
 $dark: #0a1438;
-$light: #e6ecf7;
+$cream: hsl(30, 38%, 96%);
+$light: $cream;
+// $light: #e6ecf7;
 
 // Add white and black to our theme's color map
 

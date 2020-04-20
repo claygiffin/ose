@@ -41,6 +41,13 @@ h3 {
   margin-top: 1em;
 }
 
+a {
+  color: $secondary;
+  &:hover {
+    color: darken($secondary, 20%);
+  }
+}
+
 .wide {
   text-align: center;
 }
@@ -81,7 +88,7 @@ ul li {
 }
 
 .leadership-card {
-  background-color: lighten($light, 2.5%);
+  background-color: lighten($cream, 2.5%);
   margin-top: 2rem;
   padding: 1.5rem;
   > div {
@@ -94,7 +101,7 @@ ul li {
     }
   }
   .card-body {
-    border-top: 1px solid darken($light, 10%);
+    border-top: 1px solid rgba(black, 0.15);
     padding-top: 1rem;
     padding-bottom: 0.5rem;
   }
@@ -139,7 +146,7 @@ ul li {
     a {
       color: $primary;
       &:hover {
-        color: $blue;
+        color: $secondary
       }
     }
     span {
@@ -213,13 +220,13 @@ ul li {
   margin-top: 2rem;
   padding: 2rem 1.5rem;
   // border-top: 1px solid black;
-  background-color: lighten($light, 2.5%);
+  background-color: $cream;
   text-align: center;
   > div {
     display: none;
   }
   .question-wrap {
-    border-bottom: 1px solid darken($light, 20%);
+    border-bottom: 1px solid rgba(black, 0.15);
     padding-bottom: 2rem;
     img {
       width: 150px;
@@ -284,7 +291,7 @@ ul li {
       .description {
         font-weight: 700;
         margin-bottom: 1.5em;
-        background: darken($light, 2.5%);
+        background: darken($cream, 5%);
         padding: 0.5em;
       }
       ul {
@@ -347,8 +354,8 @@ ul li {
       display: block;
       margin-top: 3em;
       padding: 1em 0 1.5em;
-      border-bottom: 1px solid darken($light, 20%);
-      border-top: 1px solid darken($light, 5%);
+      border-bottom: 1px solid rgba(black, 0.25);
+      border-top: 1px solid rgba(black, 0.05);
       font-weight: 600;
     }
   }
@@ -357,12 +364,12 @@ ul li {
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
-    color: darken($light, 30%);
+    color: rgba(black, 0.4);
     margin-top: 1em;
     cursor: pointer;
     transition: color 0.5s ease;
     &:hover {
-      color: $blue;
+      color: $secondary;
     }
   }
 }
