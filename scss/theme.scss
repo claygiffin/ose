@@ -221,6 +221,11 @@ ul li {
   .question-wrap {
     border-bottom: 1px solid darken($light, 20%);
     padding-bottom: 2rem;
+    img {
+      width: 150px;
+      height: 150px;
+      margin-top: -1.5rem;
+    }
     .question {
       font-size: 2.5rem;
       line-height: 1.125;

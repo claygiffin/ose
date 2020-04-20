@@ -71,7 +71,7 @@ In this file:
   --purple: #8762cd;
   --pink: #e8006d;
   --red: #ea172b;
-  --orange: #c45500;
+  --orange: #cf4c00;
   --yellow: #ffc107;
   --green: #21883f;
   --teal: #0c8763;
@@ -12618,6 +12618,12 @@ ul li {
   padding-bottom: 2rem;
 }
 
+#quiz .question-wrap img {
+  width: 150px;
+  height: 150px;
+  margin-top: -1.5rem;
+}
+
 #quiz .question-wrap .question {
   font-size: 2.5rem;
   line-height: 1.125;
@@ -12664,12 +12670,12 @@ ul li {
 
 #quiz #results .headline .legality.unknown:before {
   content: 'might be ';
-  color: #c45500;
+  color: #cf4c00;
 }
 
 #quiz #results .headline .legality.unknown:after {
   content: 'illegal';
-  color: #c45500;
+  color: #cf4c00;
 }
 
 #quiz #results .gt30-description {
@@ -12731,7 +12737,7 @@ ul li {
 }
 
 #quiz #results .details ul li.unknown {
-  color: #c45500;
+  color: #cf4c00;
 }
 
 #quiz #results .details ul li.unknown:before {
