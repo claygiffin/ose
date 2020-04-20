@@ -183,9 +183,9 @@ ul li {
 }
 
 .hero-1 {
-  background-image: url(../images/ose_sky_4-20_manhattan_1@3x.png);
+  background-image: url(../images/ose_sky_4-20_manhattan_2@3x.png);
   background-size: cover;
-  background-position: 50% 100%;
+  background-position: 50% 50%;
   &:before {
     display: none;
   }
@@ -193,7 +193,7 @@ ul li {
 
 .hero-2 {
   background-image: url(../images/ose_sky_4-20_brooklyn_1@3x.png);
-  background-position: 50% 100%;
+  background-position: 50% 50%;
   background-size: cover;
   &:before {
     display: none;
@@ -202,7 +202,7 @@ ul li {
 
 .hero-3 {
   background-image: url(../images/ose_sky_4-20_queens_1@3x.png);
-  background-position: 50% 100%;
+  background-position: 50% 50%;
   background-size: cover;
   &:before {
     display: none;
@@ -317,7 +317,7 @@ ul li {
           &.unknown {
             color: $orange;
             &:before {
-              content: '?';
+              content: '!';
             }
             .if-unknown {
               display: block;
