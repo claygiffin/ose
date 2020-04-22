@@ -52,8 +52,15 @@ a {
   text-align: center;
 }
 
-#global-header .dropdown-menu a {
-  display: inline-block;
+.extensible-list li {
+  margin-bottom: 0.625em;
+  &:last-child {
+    margin-bottom: 0.125em;
+  }
+  a {
+    display: inline-block;
+    line-height: 1.25;
+  }
 }
 
 #quick-links {
@@ -146,7 +153,7 @@ ul li {
     a {
       color: $primary;
       &:hover {
-        color: $secondary
+        color: $secondary;
       }
     }
     span {

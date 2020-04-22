@@ -12433,8 +12433,17 @@ a:hover {
   text-align: center;
 }
 
-#global-header .dropdown-menu a {
+.extensible-list li, [id="languages"] ul li {
+  margin-bottom: 0.625em;
+}
+
+.extensible-list li:last-child, [id="languages"] ul li:last-child {
+  margin-bottom: 0.125em;
+}
+
+.extensible-list li a, [id="languages"] ul li a {
   display: inline-block;
+  line-height: 1.25;
 }
 
 #quick-links {
