@@ -197,7 +197,7 @@ ul li {
 }
 
 .hero-1 {
-  background-image: url(../images/ose_sky_4-20_manhattan_2@3x.png);
+  background-image: url(../images/ose_web_manhattan_04A@3x.png);
   background-size: cover;
   background-position: 50% 50%;
   &:before {
@@ -206,7 +206,7 @@ ul li {
 }
 
 .hero-2 {
-  background-image: url(../images/ose_sky_4-20_brooklyn_1@3x.png);
+  background-image: url(../images/ose_web_brooklyn_04dark@3x.png);
   background-position: 50% 50%;
   background-size: cover;
   &:before {
@@ -215,7 +215,25 @@ ul li {
 }
 
 .hero-3 {
-  background-image: url(../images/ose_sky_4-20_queens_1@3x.png);
+  background-image: url(../images/ose_web_queens_04A@3x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  &:before {
+    display: none;
+  }
+}
+
+.hero-4 {
+  background-image: url(../images/ose_web_bronx_04dark@3x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  &:before {
+    display: none;
+  }
+}
+
+.hero-5 {
+  background-image: url(../images/ose_web_statenIsl_04A@3x.png);
   background-position: 50% 50%;
   background-size: cover;
   &:before {
@@ -385,6 +403,84 @@ ul li {
   &.active {
     background: $black;
     border-color: $black;
+  }
+}
+
+.fines-table {
+  width: 100%;
+  background: $cream;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  .t-row {
+    width: 100%;
+    display: flex;
+
+    &.t-header {
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      .t-cell {
+        background: $primary !important;
+        color: white !important;
+        padding: 0.5rem;
+        &:not(:last-child) {
+          border-right: 1px solid white;
+        }
+      }
+    }
+    .t-cell {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      text-align: center;
+      padding: 1rem 1.5rem;
+      justify-content: center;
+      align-items: center;
+      &:first-child {
+        flex: none;
+        width: 33.3%;
+        background: $secondary;
+        color: white;
+        font-weight: 500;
+      }
+      .subhead {
+        margin-bottom: 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        span {
+          display: inline-block;
+          font-size: 0.75em;
+          opacity: 0.667;
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 2rem;
+          height: 1px;
+          background: currentColor;
+          margin: 0.5rem 0 0;
+          opacity: 0.5;
+        }
+      }
+    }
+    &:nth-child(odd) {
+      background: darken($cream, 5%);
+      .t-cell:first-child {
+        background: darken($secondary, 7.5%);
+      }
+    }
+  }
+  .amount {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0.25em;
+    color: darken($secondary, 20%);
   }
 }
 
