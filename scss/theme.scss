@@ -424,8 +424,8 @@ ul li {
         background: $primary !important;
         color: white !important;
         padding: 0.5rem;
-        &:not(:last-child) {
-          border-right: 1px solid white;
+        &:not(:first-child) {
+          border-left: 1px solid rgba($cream, 0.5);
         }
       }
     }
@@ -481,6 +481,22 @@ ul li {
     font-weight: 700;
     margin-bottom: 0.25em;
     color: darken($secondary, 20%);
+  }
+  .caption {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    padding: 1em 1em 0.5em;
+    color: rgba(black, 0.667);
+    text-align: left;
+    span {
+      display: inline-block;
+    }
+  }
+  .cap-symb {
+    font-weight: 400;
+    display: inline;
+    font-style: normal;
   }
 }
 

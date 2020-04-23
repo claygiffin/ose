@@ -12860,8 +12860,8 @@ ul li {
   padding: 0.5rem;
 }
 
-.fines-table .t-row.t-header .t-cell:not(:last-child) {
-  border-right: 1px solid white;
+.fines-table .t-row.t-header .t-cell:not(:first-child) {
+  border-left: 1px solid rgba(248, 243, 237, 0.5);
 }
 
 .fines-table .t-row .t-cell {
@@ -12942,6 +12942,25 @@ ul li {
   font-weight: 700;
   margin-bottom: 0.25em;
   color: #94191c;
+}
+
+.fines-table .caption {
+  display: block;
+  font-size: 1rem;
+  font-style: italic;
+  padding: 1em 1em 0.5em;
+  color: rgba(0, 0, 0, 0.667);
+  text-align: left;
+}
+
+.fines-table .caption span {
+  display: inline-block;
+}
+
+.fines-table .cap-symb {
+  font-weight: 400;
+  display: inline;
+  font-style: normal;
 }
 
 .button,
