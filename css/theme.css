@@ -12963,6 +12963,24 @@ ul li {
   font-style: normal;
 }
 
+@media (max-width: 767px) {
+  .fines-table .t-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+    border-bottom: 0.5rem solid white;
+  }
+  .fines-table .t-row.t-header {
+    display: none;
+  }
+  .fines-table .t-row .t-cell:first-child {
+    width: 100%;
+  }
+  .fines-table .t-row .t-cell:not(:first-child) {
+    padding-bottom: 0;
+  }
+}
+
 .button,
 #quiz .question-wrap .answer {
   font-size: 1.25rem;
@@ -12987,5 +13005,11 @@ ul li {
   color: white;
   background-color: black;
   border-color: black;
+}
+
+@media (max-width: 1199px) {
+  #sidebar-nav > nav {
+    padding-top: 1px !important;
+  }
 }
 /*# sourceMappingURL=theme.css.map */

@@ -498,6 +498,24 @@ ul li {
     display: inline;
     font-style: normal;
   }
+  @media (max-width: 767px) {
+    .t-row {
+      flex-wrap: wrap;
+      padding-bottom: 1.5rem;
+      border-bottom: 0.5rem solid white;
+      &.t-header {
+        display: none;
+      }
+      .t-cell {
+        &:first-child {
+          width: 100%;
+        }
+        &:not(:first-child) {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 .button,
@@ -522,5 +540,13 @@ ul li {
     color: white;
     background-color: $primary;
     border-color: $primary;
+  }
+}
+
+#sidebar-nav {
+  > nav {
+    @media (max-width: 1199px) {
+      padding-top: 1px !important;
+    }
   }
 }
