@@ -12410,7 +12410,7 @@ In this file:
 }
 
 h1 {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
 }
 
 h2 {
@@ -12849,7 +12849,6 @@ ul li {
 }
 
 .fines-table .t-row.t-header {
-  font-weight: 700;
   font-size: 1rem;
   text-transform: uppercase;
 }
@@ -12858,6 +12857,7 @@ ul li {
   background: black !important;
   color: white !important;
   padding: 0.5rem;
+  font-weight: 700 !important;
 }
 
 .fines-table .t-row.t-header .t-cell:not(:first-child) {
@@ -13011,5 +13011,20 @@ ul li {
   #sidebar-nav > nav {
     padding-top: 1px !important;
   }
+}
+
+#mission-and-vision ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#mission-and-vision ul li {
+  margin: 1.75em 0 1em;
+}
+
+#mission-and-vision ul li strong {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.25em;
 }
 /*# sourceMappingURL=theme.css.map */
