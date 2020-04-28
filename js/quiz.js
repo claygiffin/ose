@@ -40,14 +40,17 @@ $(document).ready(function () {
     var home = localStorage.getItem('home')
     var numberGuests = localStorage.getItem('number-guests')
 
+    // Host Results
     if (type === 'host') {
       var results = quiz.find('#host-results')
       results.show()
 
+      // If hosting for more than 30 days, show .gt30 message and hide details
       if (days === 'gt30') {
         results.find('.gt30-description').show()
         results.find('.details').hide()
       } else {
+        
         results.find('.gt30-description').hide()
         results.find('.details').show()
         if (home === 'no' || numberGuests === 'gt2') {
