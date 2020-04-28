@@ -185,10 +185,26 @@ ul li {
 }
 
 .featured-panel {
+  .photo {
+    background-image: url('../images/ose_web_home_2@3x.png');
+    background-size: cover;
+    background-position: 100% 100%;
+    min-height: 50vw;
+    @include media-breakpoint-up(xl) {
+      min-height: 35vw;
+    }
+    @include media-breakpoint-down(md) {
+      min-height: 30vw;
+    }
+    @include media-breakpoint-down(sm) {
+      min-height: 60vw;
+    }
+  }
   .button {
-    background-color: white;
+    background-color: transparent;
     border-color: white;
-    color: black;
+    border-width: 2px;
+    color: white;
     &:hover {
       border-color: white;
       background-color: $black;

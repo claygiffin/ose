@@ -95,7 +95,7 @@ In this file:
   --breakpoint-lg: 960px;
   --breakpoint-xl: 1200px;
   --breakpoint-xxl: 1440px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -119,7 +119,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -12578,10 +12578,36 @@ ul li {
   margin-bottom: 2em;
 }
 
+.featured-panel .photo {
+  background-image: url("../images/ose_web_home_2@3x.png");
+  background-size: cover;
+  background-position: 100% 100%;
+  min-height: 50vw;
+}
+
+@media (min-width: 1200px) {
+  .featured-panel .photo {
+    min-height: 35vw;
+  }
+}
+
+@media (max-width: 959.98px) {
+  .featured-panel .photo {
+    min-height: 30vw;
+  }
+}
+
+@media (max-width: 719.98px) {
+  .featured-panel .photo {
+    min-height: 60vw;
+  }
+}
+
 .featured-panel .button {
-  background-color: white;
+  background-color: transparent;
   border-color: white;
-  color: black;
+  border-width: 2px;
+  color: white;
 }
 
 .featured-panel .button:hover {
