@@ -12429,6 +12429,10 @@ a:hover {
   color: #94191c;
 }
 
+p {
+  font-size: 1.125rem;
+}
+
 .wide {
   text-align: center;
 }
@@ -12575,7 +12579,9 @@ ul li {
 }
 
 #contact h6 {
-  margin-bottom: 2em;
+  margin-bottom: 1.333em;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .featured-panel .photo {
