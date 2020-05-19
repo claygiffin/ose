@@ -48,6 +48,10 @@ a {
   }
 }
 
+p a, li a {
+  text-decoration: underline;
+}
+
 p {
   font-size: 1.125rem;
 }

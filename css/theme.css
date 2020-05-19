@@ -12429,6 +12429,10 @@ a:hover {
   color: #94191c;
 }
 
+p a, li a {
+  text-decoration: underline;
+}
+
 p {
   font-size: 1.125rem;
 }
