@@ -68,6 +68,11 @@ p {
   a {
     display: inline-block;
     line-height: 1.25;
+    text-decoration: none;
+    &:hover {
+      color: $secondary !important;
+      text-decoration: underline;
+    }
   }
 }
 

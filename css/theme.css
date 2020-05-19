@@ -12452,6 +12452,12 @@ p {
 .extensible-list li a, [id="languages"] ul li a {
   display: inline-block;
   line-height: 1.25;
+  text-decoration: none;
+}
+
+.extensible-list li a:hover, [id="languages"] ul li a:hover {
+  color: #dd363a !important;
+  text-decoration: underline;
 }
 
 #quick-links {
