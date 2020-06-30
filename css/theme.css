@@ -12886,6 +12886,14 @@ ul li {
   margin-bottom: 0.25em;
 }
 
+#language-access h5 {
+  margin-top: 1.5em;
+}
+
+#language-access ul li {
+  margin-bottom: 0;
+}
+
 #quiz {
   margin-top: 2rem;
   padding: 2rem 1.5rem;
